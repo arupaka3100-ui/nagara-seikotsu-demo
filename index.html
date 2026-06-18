@@ -1,0 +1,292 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ながら整骨院｜倉敷市玉島 の整骨院</title>
+<meta name="description" content="倉敷市玉島 の整骨院「ながら整骨院」。玉島で働く方・子育て中の方に寄り添う整骨院です Google評価★4.7。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@300;400;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --primary:#2C3E50; --accent:#9C8466; --bg:#F7F4EF; --text:#2B2B2B;
+    --muted:rgba(43,38,34,.82);
+  }
+  html{scroll-behavior:smooth}
+  body{font-family:'Noto Sans JP',sans-serif;font-weight:400;color:var(--text);background:var(--bg);line-height:1.9;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 22px}
+  .en{font-family:'Cormorant Garamond',serif;letter-spacing:.08em}
+  .serif{font-family:'Noto Serif JP',serif}
+
+  /* header */
+  header{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;
+    padding:14px 22px;background:rgba(250,247,242,.0);transition:background .3s,box-shadow .3s}
+  header.scrolled{background:rgba(250,247,242,.96);box-shadow:0 1px 14px rgba(0,0,0,.06)}
+  .brand{font-size:1.05rem;letter-spacing:.14em;color:#fff;transition:color .3s}
+  header.scrolled .brand{color:var(--primary)}
+  .nav{display:none;gap:26px}
+  .nav a{font-size:.8rem;letter-spacing:.1em;color:#fff;transition:color .3s}
+  header.scrolled .nav a{color:var(--text)}
+  .nav a:hover{color:var(--accent)}
+  .head-cta{font-size:.74rem;letter-spacing:.12em;padding:9px 20px;border:1px solid rgba(255,255,255,.7);border-radius:2px;color:#fff;transition:.3s}
+  header.scrolled .head-cta{border-color:var(--accent);color:var(--accent)}
+  .head-cta:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+
+  /* hero : 写真の上に文字 */
+  .hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;
+    color:#fff;background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.45)), url('images/hero.png'); background-size:cover;background-position:center}
+  .hero-inner{padding:0 24px;max-width:760px}
+  .hero-rating{display:inline-flex;align-items:center;gap:9px;font-size:.72rem;letter-spacing:.16em;padding:8px 20px;border:1px solid rgba(214,182,120,.75);border-radius:2px;margin-bottom:30px;background:rgba(214,182,120,.12);color:rgba(255,255,255,.92);box-shadow:0 2px 16px rgba(0,0,0,.18)}
+  .hero-rating .label{font-weight:300}
+  .hero-rating .score{display:inline-flex;align-items:center;gap:4px;font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:500;letter-spacing:.04em;color:#e7c987}
+  .hero-rating .star{font-size:.92rem;color:#e7c987}
+  .hero-catch{font-size:clamp(1.9rem,7vw,3.4rem);font-weight:500;line-height:1.45;text-shadow:0 2px 24px rgba(0,0,0,.35)}
+  .hero-sub{margin-top:20px;font-size:clamp(.9rem,3.6vw,1.05rem);font-weight:300;letter-spacing:.06em;text-shadow:0 1px 14px rgba(0,0,0,.4)}
+  .hero-scroll{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);font-size:.66rem;letter-spacing:.3em}
+  .hero-scroll::after{content:'';display:block;width:1px;height:46px;margin:12px auto 0;background:rgba(255,255,255,.7)}
+
+  /* section common */
+  section{padding:88px 0}
+  .sec-label{display:block;text-align:center;font-size:.78rem;letter-spacing:.32em;color:var(--accent);text-transform:uppercase;margin-bottom:14px}
+  .sec-title{text-align:center;font-size:clamp(1.4rem,5vw,1.95rem);font-weight:500;color:var(--primary);margin-bottom:40px;line-height:1.5}
+  .lead{max-width:660px;margin:0 auto;text-align:center;color:var(--muted);font-size:.98rem}
+
+  /* concept */
+  .concept{background:#fff}
+
+  /* worries : こんなお悩みはありませんか（共感） */
+  .worries{background:var(--bg)}
+  .worry-intro{max-width:640px;margin:0 auto 40px;text-align:center;color:var(--muted);font-size:.98rem}
+  .worry-list{display:grid;gap:16px;max-width:1000px;margin:0 auto}
+  .worry-item{position:relative;background:#fff;border:1px solid rgba(0,0,0,.07);border-radius:4px;padding:18px 22px 18px 42px;font-size:.96rem;color:var(--text)}
+  .worry-item::before{content:'';position:absolute;left:22px;top:50%;transform:translateY(-50%);width:8px;height:8px;border-radius:50%;background:var(--accent)}
+  .worry-bridge{max-width:700px;margin:42px auto 0;text-align:center;font-size:1.04rem;font-weight:500;color:var(--primary);line-height:1.9}
+
+  /* reasons : 選ばれる理由（差別化） */
+  .reasons{background:var(--bg)}
+  .reason-grid{display:grid;gap:18px;max-width:900px;margin:0 auto}
+  .reason-card{position:relative;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:4px;padding:30px 26px 26px;transition:transform .25s,box-shadow .25s}
+  .reason-card:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,0,0,.07)}
+  .reason-no{display:block;font-family:'Cormorant Garamond',serif;font-size:1.7rem;color:var(--accent);letter-spacing:.06em;margin-bottom:12px;line-height:1}
+  .reason-title{font-size:1.08rem;color:var(--primary);font-weight:500;margin-bottom:10px;line-height:1.5}
+  .reason-desc{font-size:.9rem;color:var(--muted)}
+
+  /* menu */
+  .menu-grid{display:grid;gap:18px;max-width:680px;margin:0 auto}
+  .menu-card{border:1px solid rgba(0,0,0,.08);border-radius:4px;padding:22px 24px;background:var(--bg);transition:transform .25s,box-shadow .25s}
+  .menu-card:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,0,0,.07)}
+  .menu-card-head{display:flex;justify-content:space-between;align-items:baseline;gap:14px;margin-bottom:8px}
+  .menu-name{font-size:1.05rem;color:var(--primary);font-weight:500}
+  .menu-price{font-size:1.12rem;font-weight:700;color:var(--primary);white-space:nowrap}
+  .menu-desc{font-size:.88rem;color:var(--muted)}
+
+  /* gallery */
+  .gallery{background:#fff}
+  .gallery-frame{max-width:760px;margin:0 auto;border-radius:6px;overflow:hidden}
+  .gallery-frame img{width:100%;height:auto}
+  .gallery-placeholder{width:100%;aspect-ratio:1/1;background:linear-gradient(135deg,var(--primary),var(--accent))}
+
+  /* access */
+  .access-box{max-width:600px;margin:0 auto;text-align:center}
+  .access-row{padding:18px 0;border-bottom:1px solid rgba(0,0,0,.08);display:flex;flex-direction:column;gap:4px}
+  .access-row .k{font-size:.74rem;letter-spacing:.22em;color:var(--accent)}
+  .access-row .v{font-size:1rem}
+
+  /* contact / cta */
+  .cta{background:var(--primary);color:#fff;text-align:center}
+  .cta .sec-title{color:#fff}
+  .cta-lead{max-width:560px;margin:0 auto 34px;color:rgba(255,255,255,.85);font-size:1rem}
+  .cta-btns{display:flex;flex-direction:column;gap:14px;align-items:center}
+  .btn{display:inline-block;min-width:240px;padding:16px 34px;border-radius:3px;letter-spacing:.12em;font-size:.92rem;transition:.25s}
+  .btn-fill{background:var(--accent);color:#fff}
+  .btn-fill:hover{filter:brightness(1.08)}
+  .btn-line{border:1px solid rgba(255,255,255,.6);color:#fff}
+  .btn-line:hover{background:rgba(255,255,255,.12)}
+
+  footer{background:var(--text);color:rgba(255,255,255,.6);text-align:center;padding:30px 22px;font-size:.76rem;letter-spacing:.08em}
+
+  @media(min-width:768px){
+    .nav{display:flex}
+    section{padding:120px 0}
+    .menu-grid{grid-template-columns:1fr 1fr}
+    .reason-grid{grid-template-columns:1fr 1fr}
+    .worry-list{grid-template-columns:1fr 1fr}
+    .cta-btns{flex-direction:row;justify-content:center}
+  }
+</style>
+</head>
+<body>
+
+<header id="hd">
+  <div class="brand en">ながら整骨院</div>
+  <nav class="nav">
+    <a href="#concept">Concept</a>
+    <a href="#worries">Symptoms</a>
+    <a href="#reasons">Reasons</a>
+    <a href="#menu">Menu</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#access">Access</a>
+  </nav>
+  <a href="#contact" class="head-cta">ご予約</a>
+</header>
+
+<!-- HERO : 写真の上に文字 -->
+<section class="hero">
+  <div class="hero-inner">
+    <span class="hero-rating"><span class="label">GOOGLE 口コミ</span><span class="score"><span class="star">★</span>4.7</span><span class="label">（7件）</span></span>
+    <h1 class="hero-catch serif">その痛み、根本から整えます</h1>
+    <p class="hero-sub">玉島で働く方・子育て中の方に寄り添う整骨院です</p>
+  </div>
+  <div class="hero-scroll en">SCROLL</div>
+</section>
+
+<!-- CONCEPT -->
+<section id="concept" class="concept">
+  <div class="wrap">
+    <span class="sec-label en">Concept</span>
+    <h2 class="sec-title serif">痛みの原因に向き合い、毎日を軽やかに</h2>
+    <p class="lead">ながら整骨院は、倉敷市玉島で地域の皆さまの身体に寄り添ってまいりました。デスクワークによる肩こりや腰痛、産後の骨盤の歪みなど、日々の暮らしの中で積み重なる不調は、表面的な対処だけでは繰り返してしまうことが少なくありません。当院では国家資格を持つ施術者が、お一人おひとりの身体の状態を丁寧に確認し、痛みの根本原因に向き合った施術をご提案します。施術内容や料金は事前にわかりやすくご説明し、ご納得いただいたうえで進めてまいります。お仕事やご家庭で忙しい毎日でも通いやすいよう、夜間や土日にも対応し、ネットやLINEからいつでもご予約いただけます。清潔で落ち着いた院内で、安心して身体を委ねていただける時間をお届けします。</p>
+  </div>
+</section>
+
+<!-- WORRIES : こんなお悩みはありませんか（共感） -->
+<section id="worries" class="worries">
+  <div class="wrap">
+    <span class="sec-label en">Symptoms</span>
+    <h2 class="sec-title serif">こんなお悩みはありませんか</h2>
+    <p class="worry-intro">一つでも当てはまる方は、我慢せずに一度ご相談ください。痛みの原因に向き合い、根本からの改善を目指します。</p>
+    <div class="worry-list">
+      <div class="worry-item">デスクワークで肩や首がいつも重い</div>
+      <div class="worry-item">朝起きると腰が痛く、動き出しがつらい</div>
+      <div class="worry-item">出産後、骨盤の歪みや体型の変化が気になる</div>
+      <div class="worry-item">マッサージに通っても、すぐ元に戻ってしまう</div>
+      <div class="worry-item">頭痛や眼精疲労が長く続いている</div>
+      <div class="worry-item">交通事故やスポーツのケガの痛みが残っている</div>
+    </div>
+    <p class="worry-bridge">痛みを感じていても、「忙しくて時間がない」「どこへ行けばいいかわからない」と、つい後回しにしていませんか。ながら整骨院は、その"通いにくさ"そのものをなくしました。</p>
+  </div>
+</section>
+
+<!-- REASONS : 選ばれる理由（差別化） -->
+<section id="reasons" class="reasons">
+  <div class="wrap">
+    <span class="sec-label en">Reasons</span>
+    <h2 class="sec-title serif">玉島で、ながら整骨院が選ばれる理由</h2>
+    <p class="lead" style="margin-bottom:46px">だからこそ、ながら整骨院は「通い続けられること」にこだわりました。従来の整骨院にありがちな“予約しづらい・料金がわかりにくい・時間が合わない”を、一つずつ解消しています。</p>
+    <div class="reason-grid">
+      <div class="reason-card">
+        <span class="reason-no">01</span>
+        <h3 class="reason-title">ネット・LINEで24時間予約</h3>
+        <p class="reason-desc">お仕事や家事で電話できない時間帯でも、スマホからいつでもご予約が完結。思い立ったその場で、待たずに予約できます。</p>
+      </div>
+      <div class="reason-card">
+        <span class="reason-no">02</span>
+        <h3 class="reason-title">料金と施術内容を事前に明示</h3>
+        <p class="reason-desc">来院前にメニューと料金をはっきりご案内。「いくらかかるかわからない」という不安なく、納得してから施術を受けられます。</p>
+      </div>
+      <div class="reason-card">
+        <span class="reason-no">03</span>
+        <h3 class="reason-title">平日夜20時・土日も診療</h3>
+        <p class="reason-desc">仕事帰りや子育ての合間にも通える営業時間。「通いたくても時間が合わない」を解消し、続けやすい通院をかなえます。</p>
+      </div>
+      <div class="reason-card">
+        <span class="reason-no">04</span>
+        <h3 class="reason-title">症状に合わせた専門施術</h3>
+        <p class="reason-desc">交通事故のむち打ち、産後の骨盤、スポーツ障害まで。国家資格を持つ施術者が、お悩みに合わせて専門的に対応します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section id="menu" class="menu">
+  <div class="wrap">
+    <span class="sec-label en">Menu</span>
+    <h2 class="sec-title serif">症状別のおすすめメニュー</h2>
+    <div class="menu-grid">
+        <div class="menu-card">
+          <div class="menu-card-head">
+            <span class="menu-name">肩こり・腰痛改善</span>
+            <span class="menu-price">¥3,500〜</span>
+          </div>
+          <p class="menu-desc">デスクワークや家事による慢性的な凝りを根本から整えます</p>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-head">
+            <span class="menu-name">産後骨盤矯正</span>
+            <span class="menu-price">¥4,000〜</span>
+          </div>
+          <p class="menu-desc">出産で歪んだ骨盤を丁寧に調整し、体調を整えます</p>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-head">
+            <span class="menu-name">交通事故施術</span>
+            <span class="menu-price">応相談</span>
+          </div>
+          <p class="menu-desc">事故後のむち打ちや痛みに、専門的に対応いたします</p>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-head">
+            <span class="menu-name">スポーツ障害ケア</span>
+            <span class="menu-price">¥3,500〜</span>
+          </div>
+          <p class="menu-desc">運動による痛みや不調の回復と再発予防をサポートします</p>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="gallery">
+  <div class="wrap">
+    <span class="sec-label en">Gallery</span>
+    <h2 class="sec-title serif">院内の様子</h2>
+    <p class="lead" style="margin-bottom:34px">自然光が差し込む清潔な院内で、安心して施術を受けていただけます。</p>
+    <div class="gallery-frame"><img src='images/gallery.png' alt='ながら整骨院の院内イメージ' loading='lazy'></div>
+  </div>
+</section>
+
+<!-- ACCESS -->
+<section id="access" class="access">
+  <div class="wrap">
+    <span class="sec-label en">Access</span>
+    <h2 class="sec-title serif">アクセス・営業案内</h2>
+    <div class="access-box">
+      <div class="access-row"><span class="k">ADDRESS</span><span class="v">岡山県倉敷市玉島中央町１丁目２０−１</span></div>
+      <div class="access-row"><span class="k">TEL</span><span class="v">086-486-3699</span></div>
+      <div class="access-row"><span class="k">OPEN</span><span class="v">平日 9:00–20:00 / 土日 9:00–18:00 / 祝日休</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / CTA -->
+<section id="contact" class="cta">
+  <div class="wrap">
+    <span class="sec-label en">Reservation</span>
+    <h2 class="sec-title serif">ご予約・お問い合わせ</h2>
+    <p class="cta-lead">肩こりや腰痛、産後のお悩みはお気軽にご相談ください。ネット・LINEから24時間ご予約いただけます。</p>
+    <div class="cta-btns">
+      <a href="tel:086-486-3699" class="btn btn-fill">お電話でのご予約</a>
+      <a href="#" class="btn btn-line">Webで予約する</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="en" style="letter-spacing:.18em;margin-bottom:6px">ながら整骨院</div>
+  倉敷市玉島 の整骨院 ／ 岡山県倉敷市玉島中央町１丁目２０−１<br>
+  &copy; ながら整骨院
+</footer>
+
+<script>
+  var hd=document.getElementById('hd');
+  window.addEventListener('scroll',function(){
+    if(window.scrollY>60){hd.classList.add('scrolled')}else{hd.classList.remove('scrolled')}
+  });
+</script>
+</body>
+</html>
